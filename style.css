@@ -1,0 +1,107 @@
+/* Reset & basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1d1f27, #2a2d3a);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* for small screens */
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  animation: float 2s ease-in-out infinite alternate;
+}
+
+/* Headings responsive feel */
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
+  color: #00ffea;
+  margin-bottom: 12px;
+  text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+}
+
+p {
+  font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+  color: #ddd;
+  margin-bottom: 25px;
+  line-height: 1.45;
+}
+
+input {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+button {
+  width: 100%;
+  max-width: 200px;
+  padding: 14px 0;
+  border-radius: 12px;
+  border: none;
+  background: #00ffea;
+  color: #1d1f27;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #00d8c0;
+  transform: scale(1.05);
+}
+
+#feedback {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  min-height: 24px;
+}
+
+/* floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
+/* 👇 Extra responsive tweaks */
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 20px;
+  }
+  button {
+    font-size: 0.95rem;
+  }
+}
