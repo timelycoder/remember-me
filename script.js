@@ -24,6 +24,6 @@ function checkName() {
     setTimeout(() => {
       window.location.href =
         "https://www.facebook.com/moham.mada.samasujjamana.sumana";
-    }, 1500);
+    }, 4500);
   }
 }
